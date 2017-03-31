@@ -172,7 +172,7 @@ class Algorithm(object):
 
 #in case no file orr text is entered
 if test:
-    text = "Compatibility of systems of linear constraints over the set of natural numbers. Criteria of compatibility of a system of linear Diophantine equations, strict inequations, and nonstrict inequations are considered. Upper bounds for components of a minimal set of solutions and algorithms of construction of minimal generating sets of solutions for all types of systems are given. These criteria and the corresponding algorithms for constructing a minimal supporting set of solutions can be used in solving all the considered types of systems and systems of mixed types."
+    text = "We received your profile through MoBerries. We start the process with a coding challenge. I am attaching the required files for the challenge. The problem statement is provided vague in purpose. You are free to make assumptions. It would be great if you could get back to us with the challenge. Please feel free to reach out if you have any issues or questions. "
 
     # Split text into sentences
     sentenceList = split_sentences(text)

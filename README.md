@@ -14,4 +14,11 @@ The latter is far more efficient than the former.
 
 Output displayed is each keyword extracted from the script.txt file and their corresponding scores.
 
+What are Keywords?
+
+Keywords, defined as a sequence of one or more words, provide a
+compact representation of a document’s content. Ideally, keywords represent in
+condensed form the essential content of a document.
+
+
 

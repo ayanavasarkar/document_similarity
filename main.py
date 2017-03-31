@@ -47,14 +47,13 @@ class Main:
 	def test(self,x):
 		print x
 
+
 sample_file = "script.txt"
 
 k=Main(sample_file)
 keywords=k.ret_keywords()
-#print keywords
 n=10											#n= number of keywords to be taken into account
 keywords=k.truncated_keyword(n)
-#print len(keywords)
 #print keywords
 script_list=k.script_keys_to_list(keywords,n)
 print script_list
