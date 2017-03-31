@@ -37,4 +37,17 @@ This line in the file main.py is an important line due to the numbers 4,1,3.
 It indicates that for the extracted keywords, each word must consist of minimum of 4 letters, each phrase can have a maximum of 3 words and has appeared at least 3 times in the document. Now these 3 values can be altered accordingly.
 
 
+Score of the Keywords
+
+After the keywords have been extracted, we calculate the degree and the frequency of each word.
+
+Degree = number of words in the keyword phrase -1
+
+Frequency = number of times the keyword appeared in the document
+
+Final Score = (degree/frequency)
+
+Thus, Total score of a keyword phrase = sum of each of its keyword scores
+
+
 
