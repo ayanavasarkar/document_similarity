@@ -96,4 +96,21 @@ Final Score = (degree/frequency)
 Thus, Total score of a keyword phrase = sum of each of its keyword scores
 
 
+Similarity Calculation with Transcript file
+
+After the Kywords have been extracted from the script.py file, next we need to measure the similarity between the keywords and words of the Transcript files. Now, as earlier mentioned, only the keywords from the transcript files can be extracted or all the words excluding the stop words can be extracted from the transcript files. 
+A similarity calculation using Cosine similarity is measured between the keywords from the script.py and the words from each of the transcript files. The Similarities for each of the keywords of the script.py file with each of the words from transcript files are added up and thus we end up with a list having each keyword and its corresponding cumulated similarity value. this has been explained with an example:
+
+If keywords extracted from script.py are [bird, wonderwall of dreams]
+Let the words extracted from the first transcript file be [ball, bird in wonderland]
+
+Then we compare similarity between the following pairs:
+(bird, ball)
+(bird, bird in wonderland)
+(wonderwall of dreams, ball)
+(wonderwall of dreams, bird in wonderland)
+
+In the end, we end up with a list of [(bird:sim_score),(wonderwall of dreams:score)]
+Now we sort the list in descending order of the scores of each keyword and we obtain the final result.
+
 
