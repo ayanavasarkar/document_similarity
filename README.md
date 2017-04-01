@@ -23,6 +23,19 @@ export pythonpath=$pythonpath /usr/local/lib/python3.x/site-packages
 
 3.x denotes the version of Python installed. Now save and close it.
 
+--> In the terminal type the following
+sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+
+--> Next type the following command--
+pip install -U scikit-learn
+
+--> Now on the terminal git this package using the following command:
+git clone https://github.com/ayanavasarkar/document_similarity.git
+
+--> cd document_similarity (in the Terminal).
+
+--> python main.py
+
 
 What this package does?
 
