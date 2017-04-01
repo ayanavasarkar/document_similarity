@@ -16,10 +16,15 @@ The latter is far more efficient than the former.
 Output displayed is each keyword extracted from the script.txt file and their corresponding scores.
 
 
+
+
+
 What are Keywords?
 
-
 Keywords, defined as a sequence of one or more words, provide a compact representation of a document’s content. Ideally, keywords represent in condensed form the essential content of a document.
+
+
+
 
 
 Extraction of Keywords
@@ -35,6 +40,10 @@ self.stop_word_t = algorithm.Algorithm("SmartStoplist.txt", 4, 1, 3)
 This line in the file main.py is an important line due to the numbers 4,1,3.
 
 It indicates that for the extracted keywords, each word must consist of minimum of 4 letters, each phrase can have a maximum of 3 words and has appeared at least 3 times in the document. Now these 3 values can be altered accordingly.
+
+
+
+
 
 
 Score of the Keywords
