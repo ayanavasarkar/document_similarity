@@ -1,5 +1,29 @@
 ﻿# DOCUMENT SIMILARITY
 
+STEPS FOR INSTALLATION
+
+Open the terminal and run the following commands:
+
+--> sudo apt-get upgrade
+
+--> sudo apt-get update
+
+--> python3 -v (to check if python version 3 is already installed or not)
+
+--> sudo apt-get install -y python3-pip
+
+--> sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+(for setting up the Python programming environment)
+
+--> Open up a terminal and type .bashrc
+
+--> In the file that now opens, set the pythonpath using the following command-
+
+export pythonpath=$pythonpath /usr/local/lib/python3.x/site-packages
+
+3.x denotes the version of Python installed. Now save and close it.
+
+
 What this package does?
 
 
