@@ -36,6 +36,9 @@ git clone https://github.com/ayanavasarkar/document_similarity.git
 
 --> python main.py
 
+The file algorithm.py contains the implementation of keyphrase extraction after stopword removal. Now in order to add more files or to remove files from which comparison with keywords is to be done, simply go to the file main.py and in line number 93, make the required path additions.
+
+
 
 What this package does?
 
