@@ -25,7 +25,7 @@ def load_stop_words(stop_word_file):
     stop_words = []
     for line in open(stop_word_file):
         if line.strip()[0:1] != "#":
-            for word in line.split():  # in case more than one per line
+            for word in line.split(): 		# in case more than one per line
                 stop_words.append(word)
     return stop_words
 
@@ -65,9 +65,10 @@ def build_stop_word_regex(stop_word_file_path):
     stop_word_pattern = re.compile('|'.join(stop_word_regex_list), re.IGNORECASE)
     return stop_word_pattern
 
-
+#Taking the word length to be a maximum of 5
 def generate_candidate_keywords(sentence_list, stopword_pattern, min_char_length=1, max_words_length=5):
-    phrase_list = []
+    phrase_list = []		#list containing the keyword phrases
+    #stopword removal
     for s in sentence_list:
         tmp = re.sub(stopword_pattern, '|', s.strip())
         phrases = tmp.split("|")
@@ -129,7 +130,7 @@ def calculate_word_scores(phraseList):
     for item in word_frequency:
         word_score.setdefault(item, 0)
         word_score[item] = word_degree[item] / (word_frequency[item] * 1.0)  #orig.
-    #word_score[item] = word_frequency[item]/(word_degree[item] * 1.0) #exp.
+    
     return word_score
 
 
@@ -176,7 +177,7 @@ if test:
     # Split text into sentences
     sentenceList = split_sentences(text)
     #stoppath = "FoxStoplist.txt" #Fox stoplist contains "numbers", so it will not find "natural numbers" like in Table 1.1
-    stoppath = "RAKE/SmartStoplist.txt"  #SMART stoplist misses some of the lower-scoring keywords in Figure 1.5, which means that the top 1/3 cuts off one of the 4.0 score words in Table 1.1
+    stoppath = "document_similarity/SmartStoplist.txt"  #SMART stoplist misses some of the lower-scoring keywords in Figure 1.5, which means that the top 1/3 cuts off one of the 4.0 score words in Table 1.1
     stopwordpattern = build_stop_word_regex(stoppath)
 
     # generate candidate keywords
