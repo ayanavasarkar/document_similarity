@@ -28,19 +28,19 @@ class Main:
 		self.keywords= sorted(self.keywords,key=lambda l:l[1], reverse=True)	#sort the keywords in descending order of score
 		return self.keywords
 
-	def truncated_keyword(self,n):
-		self.n=n
+	def truncated_keyword(self,n):							#find the truncated list of best 'n' keywords
+		self.n=n	
 		self.keywords=self.keywords[0:self.n]
 		return self.keywords
 
-	def script_keys_to_list(self,keywords,n):
+	def script_keys_to_list(self,keywords,n):					#converting the truncated keywords into a list
 		script_list=[]
 		for i in range(n):
 			script_list.append(keywords[i][0])
 		return script_list
 
 
-	def transcript_preprocess(self,transcript):
+	def transcript_preprocess(self,transcript):					#pre-process the transcript files to extract the words
 		self.stop_word_t = algorithm.Algorithm("SmartStoplist.txt", 4, 1, 3)
 		self.transcript=open(transcript,'r')
 		self.t_text=self.transcript.read()
