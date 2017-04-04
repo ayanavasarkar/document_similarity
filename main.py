@@ -9,40 +9,17 @@ class Main:
 		self.sample_file=open(sample_file,'r')
 		self.text = self.sample_file.read()
 		
-			
-	def stop_word_removal(self):
-		self.stop_word = algorithm.Algorithm("SmartStoplist.txt", 4, 3, 3)	#stop word removal using the smart stopword list
-	
-	def ret_keywords(self):
-		self.keywords = self.stop_word.run(self.text)				#first find the keywords
-		self.keywords= sorted(self.keywords,key=lambda l:l[1], reverse=True)	#sort the keywords in descending order of score
-		return self.keywords
-
-	def truncated_keyword(self,n):
-		self.n=n
-		self.keywords=self.keywords[0:self.n]
-import algorithm
-import operator
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-
-class Main:
-	def __init__(self, sample_file):
-		self.stop_word_removal()		
-		self.sample_file=open(sample_file,'r')
-		self.text = self.sample_file.read()
 		
-	
-'''
-algorithm.Algorithm("SmartStoplist.txt", 4, 3, 3) means that 
+	'''
+		algorithm.Algorithm("SmartStoplist.txt", 4, 3, 3) means that 
 
-Each word of the keyword phrase has at least 4 characters
-Each keyword phrase has at most 3 words
-Each keyword appears in the text at least 3 times
+		Each word of the keyword phrase has at least 4 characters
+		Each keyword phrase has at most 3 words
+		Each keyword appears in the text at least 3 times
 
-This can be altered according to user's discretion
+		This can be altered according to user's discretion
 	
-'''
+	'''
 	def stop_word_removal(self):
 		self.stop_word = algorithm.Algorithm("SmartStoplist.txt", 4, 3, 3)	#stop word removal using the smart stopword list
 	
